@@ -1,3 +1,6 @@
+# CONSULTA-CEP-ANGULAR
+Projeto que consulta o Cep pela API do viacep, para praticar os meus conhecimentos.
+
 # Treinamento
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.4.
