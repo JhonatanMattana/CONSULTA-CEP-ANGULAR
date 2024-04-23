@@ -1,0 +1,63 @@
+<main class="col-8 col-sm-8 col-md-6 col-lg-6 col-xl-4">
+  <h1>Consultar cep</h1>
+  <section>
+    <form #form="ngForm" class="form-control">
+      <app-bc-input-text
+        [bcDisabled]="false"
+        [(bcModel)]="cep.cep"
+        bcLabel="Cep:"
+        class="row col-6"
+      ></app-bc-input-text>
+      <app-bc-button
+        class="row mt-3 ml-5"
+        bcLabel="Consultar"
+        (click)="consultarCep()"
+      ></app-bc-button>
+    </form>
+  </section>
+  <section>
+    <form #form="ngForm" class="form-control">
+      <app-bc-input-text
+        [bcDisabled]="true"
+        [bcModel]="cep.cep"
+        bcLabel="Cep:"
+        class="row col-8"
+      ></app-bc-input-text>
+      <app-bc-input-text
+        [bcDisabled]="true"
+        [bcModel]="cep.ddd"
+        bcLabel="DDD:"
+        class="row col-8"
+      ></app-bc-input-text>
+      <app-bc-input-text
+        [bcDisabled]="true"
+        [bcModel]="cep.ibge"
+        bcLabel="Ibge:"
+        class="row col-8"
+      ></app-bc-input-text>
+      <app-bc-input-text
+        [bcDisabled]="true"
+        [bcModel]="cep.localidade"
+        bcLabel="Localidade:"
+        class="row col-8"
+      ></app-bc-input-text>
+      <app-bc-input-text
+        [bcDisabled]="true"
+        [bcModel]="cep.siafi"
+        bcLabel="Siafi:"
+        class="row col-8"
+      ></app-bc-input-text>
+      <app-bc-input-text
+        [bcDisabled]="true"
+        [bcModel]="cep.uf"
+        bcLabel="UF:"
+        class="row col-8"
+      ></app-bc-input-text>
+    </form>
+  </section>
+
+  <div *ngIf="isLocalizouCep" class="alert alert-danger" role="alert">
+    Cep não localizado!
+  </div>
+
+</main>

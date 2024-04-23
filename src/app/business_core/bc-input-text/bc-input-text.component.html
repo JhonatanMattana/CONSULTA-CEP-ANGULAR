@@ -1,0 +1,11 @@
+<div id="bc-input-text">
+  <div>
+    <label for="bc-label">{{ bcLabel }}</label>
+  </div>
+  <div ngForm #bcNgForm="ngForm">
+    <input type="text" name="input" id="bc-input-text" class="form-control"
+      [disabled]="bcDisabled"
+      [(ngModel)]="bcModel"
+      >
+  </div>
+</div>
