@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit, ViewChild } from '@angular/core';
 import { ConsultaCepService } from '../service/consulta-cep.service';
 import { Cep } from 'src/app/modelo/cep';
 

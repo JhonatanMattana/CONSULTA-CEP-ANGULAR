@@ -1,14 +1,16 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   selector: 'app-bc-input-text',
   templateUrl: './bc-input-text.component.html',
-  styleUrls: ['./bc-input-text.component.scss']
+  styleUrls: ['./bc-input-text.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class BcInputTextComponent implements OnInit {
 
   @Input() bcLabel: string = '';
   @Input() bcDisabled: boolean = false;
+  @Input() bcPattern: string;
 
   private _bcModel: string = '';
   @Output() bcModelChange: EventEmitter<string> = new EventEmitter();
@@ -24,6 +26,15 @@ export class BcInputTextComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  getPattern(): RegExp {
+    switch (this.bcPattern) {
+      case 'cep':
+        return /(\d{8}|\d{5}-\d{3})/;
+      default:
+        return /.*/;
+    }
   }
 
 }

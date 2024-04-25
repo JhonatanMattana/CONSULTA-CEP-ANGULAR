@@ -5,6 +5,7 @@
       <app-bc-input-text
         [bcDisabled]="false"
         [(bcModel)]="cep.cep"
+        bcPattern="cep"
         bcLabel="Cep:"
         class="row col-6"
       ></app-bc-input-text>
@@ -17,12 +18,6 @@
   </section>
   <section>
     <form #form="ngForm" class="form-control">
-      <app-bc-input-text
-        [bcDisabled]="true"
-        [bcModel]="cep.cep"
-        bcLabel="Cep:"
-        class="row col-8"
-      ></app-bc-input-text>
       <app-bc-input-text
         [bcDisabled]="true"
         [bcModel]="cep.ddd"

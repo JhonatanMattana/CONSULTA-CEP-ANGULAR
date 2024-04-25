@@ -5,6 +5,7 @@
   <div ngForm #bcNgForm="ngForm">
     <input type="text" name="input" id="bc-input-text" class="form-control"
       [disabled]="bcDisabled"
+      [pattern]="getPattern()"
       [(ngModel)]="bcModel"
       >
   </div>
